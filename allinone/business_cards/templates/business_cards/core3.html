@@ -1,0 +1,21 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Визитка{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <nav>
+        <a href="{% url 'index' %}">main</a>
+        <a href="{% url 'core1' %}">Кор 1</a>
+        <a href="{% url 'core2' %}">Кор 2</a>
+        <a href="{% url 'core4' %}">Кор 4</a>
+        <a href="{% url 'login' %}">Login</a>
+    </nav>
+    <div class="card">
+        {% block content %}{% endblock %}
+    </div>
+</body>
+</html>
